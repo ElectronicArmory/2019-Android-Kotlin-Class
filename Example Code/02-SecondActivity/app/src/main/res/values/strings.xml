@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SecondActivity</string>
+    <string name="add_mileage">Add Mileage</string>
+</resources>

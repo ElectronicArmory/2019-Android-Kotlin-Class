@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         launchButton.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
 
-//            intent.putExtra(DetailsActivity.KEY_MILES, 30000)
+            intent.putExtra(DetailsActivity.KEY_MILES, 30000)
 
             startActivityForResult(intent, 42)
         }

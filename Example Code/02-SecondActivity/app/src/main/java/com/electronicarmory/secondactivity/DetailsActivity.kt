@@ -17,7 +17,7 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-
+        val dataFromMainActivity:Int = intent.getIntExtra(KEY_MILES)
 
         val returnButton = findViewById<Button>(R.id.return_button)
 

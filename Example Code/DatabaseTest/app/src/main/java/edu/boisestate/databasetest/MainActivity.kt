@@ -39,5 +39,5 @@ data class ToDoItem(
     var todoTitle:String,
     var todoDescription:String,
     var todoDueDate: Date,
-    var weight
+    var weight:Int
     )

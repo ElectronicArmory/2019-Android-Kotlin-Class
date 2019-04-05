@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:8482489957909373351",
-      "lastPropertyId": "4:7617055153152654910",
+      "lastPropertyId": "5:7946596025430399694",
       "name": "ToDoItem",
       "properties": [
         {
@@ -23,6 +23,10 @@
         {
           "id": "4:7617055153152654910",
           "name": "todoDueDate"
+        },
+        {
+          "id": "5:7946596025430399694",
+          "name": "weight"
         }
       ],
       "relations": []

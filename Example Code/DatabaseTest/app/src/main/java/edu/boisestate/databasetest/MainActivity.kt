@@ -27,17 +27,8 @@ class MainActivity : AppCompatActivity() {
 //        query.remove()
 
         Log.d("BSU", results.count().toString())
-//        val newTodo:ToDoItem = ToDoItem(todoTitle = "New title", todoDescription = "a new desc", todoDueDate = Date())
+        val newTodo:ToDoItem = ToDoItem(todoTitle = "New title", todoDescription = "a new desc", todoDueDate = Date() )
 //        todosBox.put(newTodo)
 
     }
 }
-
-@Entity
-data class ToDoItem(
-    @Id var id:Long = 0,
-    var todoTitle:String,
-    var todoDescription:String,
-    var todoDueDate: Date,
-    var weight:Int
-    )

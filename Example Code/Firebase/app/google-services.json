@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "263766467454",
+    "firebase_url": "https://bsu-test-c9f9d.firebaseio.com",
+    "project_id": "bsu-test-c9f9d",
+    "storage_bucket": "bsu-test-c9f9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263766467454:android:98a514e01d3cdca0",
+        "android_client_info": {
+          "package_name": "com.electronicarmory.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263766467454-4mlbo9mh12or6d4mpm475kiuqs9nf1d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.electronicarmory.firebase",
+            "certificate_hash": "40dcc893fbeadb86090efdb090b48b811b8f62b9"
+          }
+        },
+        {
+          "client_id": "263766467454-19qms6c95qqdjkcev6go04v9hn3bl9v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2pRALdlEnTBwfzBjThd21VIM_MeK52-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263766467454-19qms6c95qqdjkcev6go04v9hn3bl9v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="@string/todos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView3" android:layout_weight="1"
+                android:textSize="30sp" android:textStyle="bold" android:textAlignment="center"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/addToDoButton" android:layout_weight="1"
+                android:text="@string/add_todo"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/photoRecyclerView"
+            android:name="com.electronicarmory.fragments.PhotoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".PhotoFragment"
+            tools:listitem="@layout/fragment_photo"/>
+</LinearLayout>

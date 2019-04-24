@@ -11,15 +11,17 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.electronicarmory.fragments.dummy.PhotoContent
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
-    GalleryFragment.OnFragmentInteractionListener {
+    GalleryFragment.OnFragmentInteractionListener, PhotoFragment.OnListFragmentInteractionListener {
+
 
 
     var galleryFragment:Fragment? = null
-
+    var photoFragment:PhotoFragment? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
         galleryFragment = GalleryFragment() as Fragment
+        photoFragment = PhotoFragment()
+
+        fragmentManager.beginTransaction()
+            .add(R.id.fragment_content_view, galleryFragment)
+            .addToBackStack("GALLERY")
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+            .commit()
 //            .newInstance("string 1", "string 2")
     }
 
@@ -75,13 +84,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_gallery -> {
                 fragmentManager.beginTransaction()
-                    .add(R.id.fragment_content_view, galleryFragment)
+                    .replace(R.id.fragment_content_view, galleryFragment)
                     .addToBackStack("GALLERY")
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                     .commit()
             }
             R.id.nav_slideshow -> {
-
+                fragmentManager.beginTransaction()
+                    .replace(R.id.fragment_content_view, photoFragment)
+                    .addToBackStack("PHOTO")
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                    .commit()
             }
             R.id.nav_manage -> {
 
@@ -99,6 +112,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onFragmentInteraction(uri: Uri) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+    override fun onListFragmentInteraction(item: PhotoContent.PhotoItem?) {
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
